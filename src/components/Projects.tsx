@@ -6,7 +6,6 @@ const Projects = () => {
     {
       id: 1,
       name: "RetailEdge",
-<<<<<<< HEAD
       description:
         "A supermarket self-checkout and inventory management system revolutionizing retail operations.",
       icon: ShoppingCart,
@@ -20,19 +19,10 @@ const Projects = () => {
       ],
       demoLink: "https://retailedge.vercel.app",
       githubLink: "https://github.com/yadavsharn/RetailEdge",
-=======
-      description: "A supermarket self-checkout and inventory management system revolutionizing retail operations.",
-      icon: ShoppingCart,
-      gradient: "bg-gradient-to-br from-primary to-accent",
-      features: ["Self-checkout system", "Inventory management", "Real-time analytics", "Customer insights"],
-      demoLink: "#",
-      githubLink: "#"
->>>>>>> d5d26dd (Create portfolio website)
     },
     {
       id: 2,
       name: "Pejonx",
-<<<<<<< HEAD
       description:
         "An e-commerce solution empowering local shopkeepers with digital transformation tools.",
       icon: Store,
@@ -46,19 +36,10 @@ const Projects = () => {
       ],
       demoLink: "#",
       githubLink: "#",
-=======
-      description: "An e-commerce solution empowering local shopkeepers with digital transformation tools.",
-      icon: Store,
-      gradient: "bg-gradient-to-br from-warm to-orange-400",
-      features: ["E-commerce platform", "Local shopkeeper tools", "Digital payments", "Order management"],
-      demoLink: "#",
-      githubLink: "#"
->>>>>>> d5d26dd (Create portfolio website)
     },
     {
       id: 3,
       name: "Prism",
-<<<<<<< HEAD
       description:
         "An all-in-one organization management tool streamlining business operations and team collaboration.",
       icon: Users,
@@ -73,15 +54,6 @@ const Projects = () => {
       demoLink: "#",
       githubLink: "#",
     },
-=======
-      description: "An all-in-one organization management tool streamlining business operations and team collaboration.",
-      icon: Users,
-      gradient: "bg-gradient-to-br from-success to-emerald-400",
-      features: ["Team collaboration", "Project management", "Resource planning", "Performance tracking"],
-      demoLink: "#",
-      githubLink: "#"
-    }
->>>>>>> d5d26dd (Create portfolio website)
   ];
 
   return (
@@ -92,12 +64,8 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-<<<<<<< HEAD
             Here are some of my recent projects that showcase my skills in
             building innovative solutions.
-=======
-            Here are some of my recent projects that showcase my skills in building innovative solutions.
->>>>>>> d5d26dd (Create portfolio website)
           </p>
         </div>
 
@@ -109,7 +77,6 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Project Icon */}
-<<<<<<< HEAD
               <div
                 className={`${project.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mb-6`}
               >
@@ -136,30 +103,12 @@ const Projects = () => {
                         key={idx}
                         className="text-sm text-muted-foreground flex items-center"
                       >
-=======
-              <div className={`${project.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mb-6`}>
-                <project.icon className="h-8 w-8 text-white" />
-              </div>
-              
-              {/* Project Info */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-playfair font-semibold">{project.name}</h3>
-                <p className="text-muted-foreground leading-relaxed">{project.description}</p>
-                
-                {/* Features */}
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm uppercase tracking-wide">Key Features</h4>
-                  <ul className="space-y-1">
-                    {project.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-center">
->>>>>>> d5d26dd (Create portfolio website)
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
 
                 {/* Actions */}
                 <div className="flex gap-3 pt-4">
@@ -188,18 +137,6 @@ const Projects = () => {
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </a>
-=======
-                
-                {/* Actions */}
-                <div className="flex gap-3 pt-4">
-                  <Button size="sm" className="flex-1 rounded-xl">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex-1 rounded-xl">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
->>>>>>> d5d26dd (Create portfolio website)
                   </Button>
                 </div>
               </div>
@@ -211,8 +148,4 @@ const Projects = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Projects;
-=======
-export default Projects;
->>>>>>> d5d26dd (Create portfolio website)

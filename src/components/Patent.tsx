@@ -10,11 +10,7 @@ const Patent = () => {
               Patent <span className="gradient-text">Innovation</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-<<<<<<< HEAD
               Officially patented technology demonstrating originality and impact.
-=======
-              Secured intellectual property for groundbreaking technology solutions.
->>>>>>> d5d26dd (Create portfolio website)
             </p>
           </div>
 
@@ -34,7 +30,6 @@ const Patent = () => {
               <div className="lg:col-span-2 space-y-6">
                 <div className="space-y-4">
                   <h3 className="text-3xl font-playfair font-bold">
-<<<<<<< HEAD
                     {/* 🔹 Replace with your patent title */}
                     Smart Cart System for Automated Billing & Theft Prevention
                   </h3>
@@ -43,13 +38,6 @@ const Patent = () => {
                     A patented IoT-based system integrating RFID, camera scanning, ultrasonic and 
                     weight sensors with ESP32 to automate supermarket billing, prevent theft, and 
                     enable seamless self-checkout.
-=======
-                    Innovative Technology Solution Patent
-                  </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Secured a patent for a unique innovation that addresses critical challenges in technology implementation, 
-                    demonstrating originality and potential for significant impact in the industry.
->>>>>>> d5d26dd (Create portfolio website)
                   </p>
                 </div>
 
@@ -61,11 +49,7 @@ const Patent = () => {
                     </div>
                     <div>
                       <div className="font-semibold">Patent Year</div>
-<<<<<<< HEAD
                       <div className="text-muted-foreground">2025</div> {/* 🔹 Update year */}
-=======
-                      <div className="text-muted-foreground">2024</div>
->>>>>>> d5d26dd (Create portfolio website)
                     </div>
                   </div>
                   
@@ -75,11 +59,7 @@ const Patent = () => {
                     </div>
                     <div>
                       <div className="font-semibold">Innovation Type</div>
-<<<<<<< HEAD
                       <div className="text-muted-foreground">IoT & Retail Technology</div> {/* 🔹 Update type */}
-=======
-                      <div className="text-muted-foreground">Technology Solution</div>
->>>>>>> d5d26dd (Create portfolio website)
                     </div>
                   </div>
                 </div>
@@ -87,12 +67,8 @@ const Patent = () => {
                 {/* Call to Action */}
                 <div className="pt-4">
                   <p className="text-sm text-muted-foreground italic">
-<<<<<<< HEAD
                     This patent showcases my dedication to solving real-world retail challenges 
                     with cutting-edge IoT technology and innovation.
-=======
-                    This patent represents my commitment to innovation and my ability to create novel solutions that can make a real difference.
->>>>>>> d5d26dd (Create portfolio website)
                   </p>
                 </div>
               </div>
@@ -104,8 +80,4 @@ const Patent = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Patent;
-=======
-export default Patent;
->>>>>>> d5d26dd (Create portfolio website)

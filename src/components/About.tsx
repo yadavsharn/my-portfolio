@@ -1,16 +1,11 @@
 const About = () => {
   return (
-<<<<<<< HEAD
     <section id="about" className="section-padding bg-portfolio-dark">
-=======
-    <section id="about" className="section-padding bg-secondary">
->>>>>>> d5d26dd (Create portfolio website)
       <div className="container-wide">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold">
             About <span className="gradient-text">Me</span>
           </h2>
-<<<<<<< HEAD
 
           <div className="bg-card/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-white/10 card-hover">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-inter">
@@ -31,25 +26,6 @@ const About = () => {
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-indigo-400">1</div>
-=======
-          
-          <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg card-hover">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-inter">
-              I am currently pursuing MCA, with a strong background in web development, data science, IoT, and emerging technologies. I have experience building real-world projects, winning hackathons, and even securing a patent. My journey has always been about learning, experimenting, and creating solutions that matter.
-            </p>
-            
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">5+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent">10+</div>
-                <div className="text-sm text-muted-foreground">Hackathons</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-warm">1</div>
->>>>>>> d5d26dd (Create portfolio website)
                 <div className="text-sm text-muted-foreground">Patent</div>
               </div>
               <div className="text-center">
@@ -64,8 +40,4 @@ const About = () => {
   );
 };
 
-<<<<<<< HEAD
 export default About;
-=======
-export default About;
->>>>>>> d5d26dd (Create portfolio website)

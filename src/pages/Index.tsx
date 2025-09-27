@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import Navbar from "@/components/Navbar";
-=======
->>>>>>> d5d26dd (Create portfolio website)
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -14,7 +11,6 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background font-inter">
-<<<<<<< HEAD
       <Navbar />
       <div id="hero">
         <Hero />
@@ -35,15 +31,6 @@ const Index = () => {
       <div id="contact">
         <Contact />
       </div>
-=======
-      <Hero />
-      <About />
-      <Projects />
-      <Certificates />
-      <Achievements />
-      <Patent />
-      <Contact />
->>>>>>> d5d26dd (Create portfolio website)
       <Footer />
     </div>
   );
