@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+<<<<<<< HEAD
+/* Luxury Premium Portfolio Design System for Shantanu Yadav */
+
+@layer base {
+  :root {
+    /* Brand Colors - Luxury */
+    --background: 0 0% 100%;       /* White */
+    --foreground: 0 0% 10%;        /* Deep Black */
+    
+    /* Primary - Gold */
+    --primary: 46 65% 52%;         /* Gold */
+    --primary-foreground: 0 0% 100%;
+    --primary-gradient: linear-gradient(135deg, hsl(46 65% 52%), hsl(45 80% 60%));
+    
+    /* Secondary - Soft Black */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent - Royal Purple */
+    --accent: 271 76% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 271 76% 93%;
+    
+    /* Success (Green for status, kept subtle) */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 142 76% 95%;
+    
+    /* Neutral Palette */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    
+    /* Cards and Surfaces */
+    --card: 0 0% 100%;             /* White */
+    --card-foreground: 0 0% 10%;   /* Deep Black */
+    --card-hover: 0 0% 98%;
+    
+    /* Borders and Inputs */
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 46 65% 52%;            /* Gold Ring */
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(46 65% 52%), hsl(271 76% 53%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(271 76% 53%), hsl(46 65% 52%));
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 45%), hsl(150 65% 40%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 20px hsl(46 65% 52% / 0.15);
+    --shadow-card: 0 4px 32px hsl(0 0% 0% / 0.08);
+    --shadow-hover: 0 8px 40px hsl(271 76% 53% / 0.15);
+=======
+/* Modern Portfolio Design System for Shantanu Yadav */
+
+@layer base {
+  :root {
+    /* Brand Colors - Soft and Professional */
+    --background: 255 255 255;
+    --foreground: 222 22% 15%;
+    
+    /* Soft Gradient Palette */
+    --primary: 248 100% 70%;
+    --primary-foreground: 255 255 255;
+    --primary-gradient: linear-gradient(135deg, hsl(248 100% 70%), hsl(267 100% 75%));
+    
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 222 22% 25%;
+    
+    /* Accent Colors */
+    --accent: 267 100% 75%;
+    --accent-foreground: 255 255 255;
+    --accent-soft: 267 100% 95%;
+    
+    /* Warm Accent */
+    --warm: 33 100% 70%;
+    --warm-foreground: 255 255 255;
+    --warm-soft: 33 100% 95%;
+    
+    /* Success & Portfolio Colors */
+    --success: 142 76% 65%;
+    --success-foreground: 255 255 255;
+    --success-soft: 142 76% 95%;
+    
+    /* Neutral Palette */
+    --muted: 220 13% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Cards and Surfaces */
+    --card: 255 255 255;
+    --card-foreground: 222 22% 15%;
+    --card-hover: 220 13% 98%;
+    
+    /* Borders and Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 248 100% 70%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(248 100% 70%), hsl(267 100% 75%), hsl(33 100% 75%));
+    --gradient-card: linear-gradient(135deg, hsl(255 255 255), hsl(220 13% 98%));
+    --gradient-warm: linear-gradient(135deg, hsl(33 100% 70%), hsl(45 100% 70%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 65%), hsl(160 76% 65%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 20px hsl(248 100% 70% / 0.1);
+    --shadow-card: 0 4px 32px hsl(220 13% 50% / 0.08);
+    --shadow-hover: 0 8px 40px hsl(248 100% 70% / 0.15);
+>>>>>>> d5d26dd (Create portfolio website)
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+<<<<<<< HEAD
+    /* Portfolio Specific */
+    --portfolio-bg: linear-gradient(135deg, hsl(0 0% 100%), hsl(46 65% 97%));
+    --text-gradient: linear-gradient(135deg, hsl(46 65% 52%), hsl(271 76% 53%));
+=======
+    
+    /* Portfolio Specific */
+    --portfolio-bg: linear-gradient(135deg, hsl(255 255 255), hsl(248 100% 98%));
+    --text-gradient: linear-gradient(135deg, hsl(248 100% 70%), hsl(267 100% 75%));
+>>>>>>> d5d26dd (Create portfolio website)
+  }
+}
+
+@layer components {
+<<<<<<< HEAD
+=======
+  /* Portfolio Component Styles */
+>>>>>>> d5d26dd (Create portfolio website)
+  .gradient-text {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-hover {
+    transition: var(--transition-smooth);
+<<<<<<< HEAD
+  }
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+=======
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+>>>>>>> d5d26dd (Create portfolio website)
+  }
+  
+  .btn-hero {
+    background: var(--gradient-hero);
+    color: hsl(var(--primary-foreground));
+    transition: var(--transition-bounce);
+<<<<<<< HEAD
+  }
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+=======
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+>>>>>>> d5d26dd (Create portfolio website)
+  }
+  
+  .btn-outline-hero {
+    border: 2px solid hsl(var(--primary));
+    color: hsl(var(--primary));
+    transition: var(--transition-smooth);
+<<<<<<< HEAD
+  }
+  .btn-outline-hero:hover {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    transform: translateY(-2px);
+=======
+    &:hover {
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      transform: translateY(-2px);
+    }
+>>>>>>> d5d26dd (Create portfolio website)
+  }
+  
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-20;
+  }
+  
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+* {
+  cursor: default !important;
+}
+a {
+  cursor: pointer !important;
+}
+button {
+  cursor: pointer !important;
+}
+input, textarea {
+  cursor: text !important;
+}
