@@ -195,16 +195,10 @@
   }
 }
 
-* {
-  cursor: default !important;
-}
-
-a {
-  cursor: pointer !important;
-}
-
-button {
-  cursor: pointer !important;
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }
 
 .will-change-transform {

@@ -5,13 +5,30 @@ import { Link } from "react-router-dom";
 import profileImage from "@/assets/shantanu-profile.jpg";
 import resume from "@/assets/Shantanu_Yadav_resume.pdf";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const avatarRef = useRef<HTMLDivElement>(null);
+
+  const [text, setText] = useState("");
+  const fullText = "MCA Scholar & AI Developer. Passionate about building intelligent systems using Deep Learning, Computer Vision, and IoT.";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index <= fullText.length) {
+        setText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 30); // Typing speed
+
+    return () => clearInterval(interval);
+  }, []);
 
   useGSAP(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -57,8 +74,9 @@ const Hero = () => {
                 Hi, I'm{" "}
                 <span className="gradient-text">Shantanu Yadav</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground font-inter leading-relaxed">
-                MCA Scholar & AI Developer. Passionate about building intelligent systems using Deep Learning, Computer Vision, and IoT.
+              <p className="text-xl md:text-2xl text-muted-foreground font-inter leading-relaxed h-[60px] md:h-auto">
+                {text}
+                <span className="animate-pulse text-primary">|</span>
               </p>
               <div className="flex flex-wrap gap-2 text-lg font-medium">
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full">

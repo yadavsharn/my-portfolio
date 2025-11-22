@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { motion } from "framer-motion";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
@@ -15,7 +15,29 @@ import NotFound from "@/pages/NotFound";
 import IntroOverlay from "@/components/IntroOverlay";
 import ParallaxBackground from "@/components/ParallaxBackground";
 import ResumeModal from "@/components/ResumeModal";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
+import PageTransition from "@/components/PageTransition";
 import resumeFile from "@/assets/Shantanu_Yadav_resume.pdf";
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+        <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
+        <Route path="/projects" element={<PageTransition><ProjectsPage /></PageTransition>} />
+        <Route path="/certificates" element={<PageTransition><CertificatesPage /></PageTransition>} />
+        <Route path="/achievements" element={<PageTransition><AchievementsPage /></PageTransition>} />
+        <Route path="/patent" element={<PageTransition><PatentPage /></PageTransition>} />
+        <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
+        <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 const App = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -25,6 +47,8 @@ const App = () => {
     <BrowserRouter>
       {showIntro && <IntroOverlay onComplete={() => setShowIntro(false)} />}
       <ParallaxBackground />
+      <CustomCursor />
+      <ScrollProgress />
       <ResumeModal
         isOpen={showResume}
         onClose={() => setShowResume(false)}
@@ -34,16 +58,7 @@ const App = () => {
       <div className="min-h-screen bg-transparent font-inter flex flex-col relative z-10">
         <Navbar />
         <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/certificates" element={<CertificatesPage />} />
-            <Route path="/achievements" element={<AchievementsPage />} />
-            <Route path="/patent" element={<PatentPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <AnimatedRoutes />
         </div>
         <Footer />
 
