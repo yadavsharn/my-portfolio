@@ -9,60 +9,122 @@
 @layer base {
   :root {
     /* Brand Colors - Luxury */
-    --background: 0 0% 100%;       /* White */
-    --foreground: 0 0% 10%;        /* Deep Black */
-    
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 0 0% 10%;
+    /* Deep Black */
+
     /* Primary - Gold */
-    --primary: 46 65% 52%;         /* Gold */
+    --primary: 46 65% 52%;
+    /* Gold */
     --primary-foreground: 0 0% 100%;
     --primary-gradient: linear-gradient(135deg, hsl(46 65% 52%), hsl(45 80% 60%));
-    
+
     /* Secondary - Soft Black */
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
-    
+
     /* Accent - Royal Purple */
     --accent: 271 76% 53%;
     --accent-foreground: 0 0% 100%;
     --accent-soft: 271 76% 93%;
-    
+
     /* Success (Green for status, kept subtle) */
     --success: 142 70% 45%;
     --success-foreground: 0 0% 100%;
     --success-soft: 142 76% 95%;
-    
+
     /* Neutral Palette */
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 40%;
-    
+
     /* Cards and Surfaces */
-    --card: 0 0% 100%;             /* White */
-    --card-foreground: 0 0% 10%;   /* Deep Black */
+    --card: 0 0% 100%;
+    /* White */
+    --card-foreground: 0 0% 10%;
+    /* Deep Black */
     --card-hover: 0 0% 98%;
-    
+
     /* Borders and Inputs */
     --border: 0 0% 85%;
     --input: 0 0% 85%;
-    --ring: 46 65% 52%;            /* Gold Ring */
-    
+    --ring: 46 65% 52%;
+    /* Gold Ring */
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(46 65% 52%), hsl(271 76% 53%));
     --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 98%));
     --gradient-accent: linear-gradient(135deg, hsl(271 76% 53%), hsl(46 65% 52%));
     --gradient-success: linear-gradient(135deg, hsl(142 70% 45%), hsl(150 65% 40%));
-    
+
     /* Shadows */
     --shadow-soft: 0 2px 20px hsl(46 65% 52% / 0.15);
     --shadow-card: 0 4px 32px hsl(0 0% 0% / 0.08);
     --shadow-hover: 0 8px 40px hsl(271 76% 53% / 0.15);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
+
     /* Portfolio Specific */
     --portfolio-bg: linear-gradient(135deg, hsl(0 0% 100%), hsl(46 65% 97%));
     --text-gradient: linear-gradient(135deg, hsl(46 65% 52%), hsl(271 76% 53%));
+  }
+
+  .dark {
+    /* Brand Colors - Luxury Dark */
+    --background: 240 10% 3.9%;
+    /* Deepest Blue-Black */
+    --foreground: 0 0% 98%;
+    /* Off-white */
+
+    /* Primary - Gold (Slightly lighter for dark mode contrast) */
+    --primary: 46 70% 50%;
+    --primary-foreground: 240 10% 3.9%;
+    --primary-gradient: linear-gradient(135deg, hsl(46 70% 50%), hsl(45 80% 60%));
+
+    /* Secondary - Lighter Black/Grey */
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Accent - Royal Purple (Lighter) */
+    --accent: 262 80% 65%;
+    --accent-foreground: 0 0% 98%;
+    --accent-soft: 262 80% 20%;
+
+    /* Success */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 98%;
+    --success-soft: 142 76% 15%;
+
+    /* Neutral Palette */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Cards and Surfaces */
+    --card: 240 10% 3.9%;
+    /* Matches background for seamless look or slightly lighter */
+    --card-foreground: 0 0% 98%;
+    --card-hover: 240 3.7% 15.9%;
+
+    /* Borders and Inputs */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 46 70% 50%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(46 70% 50%), hsl(262 80% 65%));
+    --gradient-card: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%));
+    --gradient-accent: linear-gradient(135deg, hsl(262 80% 65%), hsl(46 70% 50%));
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 45%), hsl(150 65% 40%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 20px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 4px 32px hsl(0 0% 0% / 0.5);
+    --shadow-hover: 0 8px 40px hsl(262 80% 65% / 0.25);
+
+    /* Portfolio Specific */
+    --portfolio-bg: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%));
   }
 }
 
@@ -73,40 +135,43 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .card-hover {
     transition: var(--transition-smooth);
   }
+
   .card-hover:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
   }
-  
+
   .btn-hero {
     background: var(--gradient-hero);
     color: hsl(var(--primary-foreground));
     transition: var(--transition-bounce);
   }
+
   .btn-hero:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
   }
-  
+
   .btn-outline-hero {
     border: 2px solid hsl(var(--primary));
     color: hsl(var(--primary));
     transition: var(--transition-smooth);
   }
+
   .btn-outline-hero:hover {
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
     transform: translateY(-2px);
   }
-  
+
   .section-padding {
     @apply py-20 px-6 md:px-12 lg:px-20;
   }
-  
+
   .container-wide {
     @apply max-w-7xl mx-auto;
   }
@@ -119,17 +184,34 @@
 
   body {
     @apply bg-background text-foreground;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  }
+
+  .dark body {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   }
 }
+
 * {
   cursor: default !important;
 }
+
 a {
   cursor: pointer !important;
 }
+
 button {
   cursor: pointer !important;
 }
-input, textarea {
+
+.will-change-transform {
+  will-change: transform;
+}
+
+input,
+textarea {
   cursor: text !important;
 }

@@ -30,14 +30,11 @@ const Patent = () => {
               <div className="lg:col-span-2 space-y-6">
                 <div className="space-y-4">
                   <h3 className="text-3xl font-playfair font-bold">
-                    {/* 🔹 Replace with your patent title */}
-                    Smart Cart System for Automated Billing & Theft Prevention
+                    IoT Shopping Cart with CNN Theft Detection
                   </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    {/* 🔹 Replace with your description */}
-                    A patented IoT-based system integrating RFID, camera scanning, ultrasonic and 
-                    weight sensors with ESP32 to automate supermarket billing, prevent theft, and 
-                    enable seamless self-checkout.
+                    <strong>Application No. 202511074908</strong><br />
+                    Designed an IoT shopping cart integrating CNN models, RFID sensors, and cloud APIs for automated checkout and theft prevention.
                   </p>
                 </div>
 
@@ -48,18 +45,18 @@ const Patent = () => {
                       <Calendar className="h-5 w-5 text-warm" />
                     </div>
                     <div>
-                      <div className="font-semibold">Patent Year</div>
-                      <div className="text-muted-foreground">2025</div> {/* 🔹 Update year */}
+                      <div className="font-semibold">Published</div>
+                      <div className="text-muted-foreground">2025</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3">
                     <div className="bg-success/10 p-3 rounded-xl">
                       <Lightbulb className="h-5 w-5 text-success" />
                     </div>
                     <div>
-                      <div className="font-semibold">Innovation Type</div>
-                      <div className="text-muted-foreground">IoT & Retail Technology</div> {/* 🔹 Update type */}
+                      <div className="font-semibold">Domain</div>
+                      <div className="text-muted-foreground">IoT & AI Retail</div>
                     </div>
                   </div>
                 </div>
@@ -67,7 +64,7 @@ const Patent = () => {
                 {/* Call to Action */}
                 <div className="pt-4">
                   <p className="text-sm text-muted-foreground italic">
-                    This patent showcases my dedication to solving real-world retail challenges 
+                    This patent showcases my dedication to solving real-world retail challenges
                     with cutting-edge IoT technology and innovation.
                   </p>
                 </div>

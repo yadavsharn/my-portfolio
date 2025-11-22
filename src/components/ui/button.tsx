@@ -1,4 +1,5 @@
 import * as React from "react"
+import { gsap } from "gsap"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -35,17 +36,47 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    const buttonRef = React.useRef<HTMLButtonElement>(null)
+
+    // Merge refs
+    React.useImperativeHandle(ref, () => buttonRef.current!)
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+      const { clientX, clientY } = e
+      const { left, top, width, height } = buttonRef.current!.getBoundingClientRect()
+      const x = (clientX - (left + width / 2)) * 0.3 // Magnetic strength
+      const y = (clientY - (top + height / 2)) * 0.3
+
+      gsap.to(buttonRef.current, {
+        x: x,
+        y: y,
+        duration: 0.3,
+        ease: "power2.out"
+      })
+    }
+
+    const handleMouseLeave = () => {
+      gsap.to(buttonRef.current, {
+        x: 0,
+        y: 0,
+        duration: 0.5,
+        ease: "elastic.out(1, 0.3)"
+      })
+    }
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
+        ref={buttonRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         {...props}
       />
     )

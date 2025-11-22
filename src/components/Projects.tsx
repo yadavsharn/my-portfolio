@@ -1,55 +1,180 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, ShoppingCart, Store, Users } from "lucide-react";
+import { ExternalLink, Github, Store, Users, Sprout, Activity, Gamepad2, Briefcase, ScanFace, HeartPulse, LayoutDashboard, MessageSquare, Camera } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      name: "RetailEdge",
+      name: "Pejonx – Local Seller Platform",
       description:
-        "A supermarket self-checkout and inventory management system revolutionizing retail operations.",
-      icon: ShoppingCart,
-      // Luxury gradient: Gold → Royal Purple
-      gradient: "bg-gradient-to-br from-primary to-accent",
+        "A hybrid e-commerce + marketing startup helping 10+ local vendors digitize inventory and sell on Amazon. Features a custom e-commerce platform and optimized Google Ads campaigns.",
+      icon: Store,
+      gradient: "bg-gradient-to-br from-orange-400 to-pink-500",
       features: [
-        "Self-checkout system",
-        "Inventory management",
-        "Real-time analytics",
-        "Customer insights",
+        "Hybrid E-commerce",
+        "Vendor Management",
+        "Amazon Integration",
+        "Google Ads Optimization",
       ],
-      demoLink: "https://retailedge.vercel.app",
-      githubLink: "https://github.com/yadavsharn/RetailEdge",
+      demoLink: "#",
+      githubLink: "#",
     },
     {
       id: 2,
-      name: "Pejonx",
+      name: "Employee Management System",
       description:
-        "An e-commerce solution empowering local shopkeepers with digital transformation tools.",
-      icon: Store,
-      // Luxury gradient: Royal Purple → Gold
-      gradient: "bg-gradient-to-br from-accent to-primary",
+        "A robust backend system for organizations to manage employees, roles, and attendance using Node.js and MongoDB. Includes JWT security and structured error handling.",
+      icon: Users,
+      gradient: "bg-gradient-to-br from-blue-400 to-indigo-500",
       features: [
-        "E-commerce platform",
-        "Local shopkeeper tools",
-        "Digital payments",
-        "Order management",
+        "Node.js & Mongoose",
+        "Role-based Auth",
+        "JWT Security",
+        "Attendance Logs",
       ],
       demoLink: "#",
       githubLink: "#",
     },
     {
       id: 3,
-      name: "Prism",
+      name: "Green Bharat",
       description:
-        "An all-in-one organization management tool streamlining business operations and team collaboration.",
-      icon: Users,
-      // Luxury gradient: Gold → Deep Black accent
-      gradient: "bg-gradient-to-br from-primary to-secondary",
+        "A large-scale environmental tech ecosystem for tracking massive tree plantations. Uses AI to detect plant health and a mobile app for volunteer coordination.",
+      icon: Sprout,
+      gradient: "bg-gradient-to-br from-green-400 to-emerald-600",
       features: [
-        "Team collaboration",
-        "Project management",
-        "Resource planning",
-        "Performance tracking",
+        "District-wise Nursery Model",
+        "AI Disease Detection",
+        "Tree Lifecycle Tracking",
+        "Mobile App",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 4,
+      name: "Personal Nutrition App",
+      description:
+        "A health tracking app with a home-screen widget for quick food logging. Analyzes eating patterns and provides personalized insights to prevent overeating.",
+      icon: Activity,
+      gradient: "bg-gradient-to-br from-red-400 to-rose-500",
+      features: [
+        "Home-screen Widget",
+        "Calorie Tracking",
+        "Pattern Analysis",
+        "Automated Insights",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 5,
+      name: "Game Application",
+      description:
+        "A complete gaming application demonstrating complex game logic, smooth animations, and state management. Showcases interactive UI and event handling skills.",
+      icon: Gamepad2,
+      gradient: "bg-gradient-to-br from-purple-400 to-violet-600",
+      features: [
+        "Complex Game Logic",
+        "Event Handling",
+        "State Management",
+        "Interactive UI",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 6,
+      name: "Career Buddy – AI Assistant",
+      description:
+        "An AI-driven career development toolkit offering mock interviews, ATS resume analysis, and skill-gap recommendations for students and professionals.",
+      icon: Briefcase,
+      gradient: "bg-gradient-to-br from-cyan-400 to-blue-600",
+      features: [
+        "AI Mock Interviews",
+        "Resume Analyzer (ATS)",
+        "Skill-gap Analysis",
+        "Career Recommendations",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 7,
+      name: "Data Center Person Recognition",
+      description:
+        "Smart security system for data centers using face recognition and person tracking to identify unauthorized presence and detect tailgating.",
+      icon: ScanFace,
+      gradient: "bg-gradient-to-br from-slate-400 to-slate-600",
+      features: [
+        "Face Recognition",
+        "Person Tracking",
+        "Tailgating Detection",
+        "Digital Audit Trail",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 8,
+      name: "Army Emotion Detection",
+      description:
+        "Mental health monitoring system for soldiers using facial emotion detection to evaluate stress, fatigue, and depression indicators for preventive support.",
+      icon: HeartPulse,
+      gradient: "bg-gradient-to-br from-yellow-400 to-orange-600",
+      features: [
+        "Facial Emotion Detection",
+        "Stress & Fatigue Analysis",
+        "AI Reports",
+        "Preventive Health",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 9,
+      name: "PRISM – Enterprise Suite",
+      description:
+        "A comprehensive platform combining ERP, HRMS, Project Management, and Sentiment Analysis into one ecosystem for team productivity.",
+      icon: LayoutDashboard,
+      gradient: "bg-gradient-to-br from-indigo-400 to-purple-600",
+      features: [
+        "ERP & HR Module",
+        "Project Management",
+        "Embedded Chat",
+        "Sentiment Analysis",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 10,
+      name: "Adaptive Conversational Chatbot",
+      description:
+        "An AI chatbot that learns and adapts its personality, humor, and tone based on user behavior, becoming more personalized over time.",
+      icon: MessageSquare,
+      gradient: "bg-gradient-to-br from-teal-400 to-teal-600",
+      features: [
+        "Adaptive Learning",
+        "Tone Analysis",
+        "Personalized Interaction",
+        "Emotional Intelligence",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 11,
+      name: "Supermarket AI Surveillance",
+      description:
+        "Computer vision security system using YOLOv11 to detect shoplifting, hidden items, and suspicious behavior in real-time.",
+      icon: Camera,
+      gradient: "bg-gradient-to-br from-red-500 to-red-700",
+      features: [
+        "YOLOv11 & OpenCV",
+        "Shoplifting Detection",
+        "Real-time Alerts",
+        "Customer Flow Tracking",
       ],
       demoLink: "#",
       githubLink: "#",
