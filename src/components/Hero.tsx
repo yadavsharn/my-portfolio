@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import profileImage from "@/assets/shantanu-profile.jpg";
 import resume from "@/assets/Shantanu_Yadav_resume.pdf";
 
@@ -77,26 +78,26 @@ const Hero = () => {
               {/* First Row */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
+                  asChild
                   size="lg"
                   className="btn-hero font-inter text-lg px-8 py-6 rounded-2xl"
-                  onClick={() =>
-                    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
-                  }
                 >
-                  View My Work
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link to="/projects">
+                    View My Work
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
 
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="btn-outline-hero font-inter text-lg px-8 py-6 rounded-2xl"
-                  onClick={() =>
-                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-                  }
                 >
-                  Contact Me
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link to="/contact">
+                    Contact Me
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
               </div>
 
