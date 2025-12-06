@@ -1,8 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Store, Users, Sprout, Activity, Gamepad2, Briefcase, ScanFace, HeartPulse, LayoutDashboard, MessageSquare, Camera } from "lucide-react";
+import { ExternalLink, Github, Store, Users, Sprout, Activity, Gamepad2, Briefcase, ScanFace, HeartPulse, LayoutDashboard, MessageSquare, Camera, ShoppingCart } from "lucide-react";
 
 const Projects = () => {
   const projects = [
+    {
+      id: 12,
+      name: "RetailEdge– Self-Checkout Retail System",
+      description:
+        "Engineered a Spring Boot backend and deployed cloud-native APIs for a smart cart-based supermarket checkout system. Integrated RFID + weight sensors on IoT carts to detect theft and generate real-time bills.",
+      icon: ShoppingCart,
+      gradient: "bg-gradient-to-br from-blue-500 to-cyan-400",
+      features: [
+        "Spring Boot Backend",
+        "IoT Smart Cart (RFID + Weight)",
+        "AWS EC2 Deployment",
+        "CI/CD Pipeline",
+      ],
+      demoLink: "https://retailedge.vercel.app",
+      githubLink: "#",
+    },
     {
       id: 1,
       name: "Pejonx – Local Seller Platform",

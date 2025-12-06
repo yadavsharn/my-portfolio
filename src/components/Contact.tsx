@@ -1,9 +1,62 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Loader2 } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      toast.success("Message sent successfully!", {
+        description: "I'll get back to you as soon as possible.",
+      });
+      reset();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Failed to send message", {
+        description: "Please try again later or contact me directly via email.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="container-wide">
@@ -24,30 +77,61 @@ const Contact = () => {
               Send a Message
             </h3>
 
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="space-y-4">
-                <Input
-                  placeholder="Your Name"
-                  className="rounded-xl border-border/50 focus:border-primary transition-colors bg-background text-foreground"
-                />
-                <Input
-                  type="email"
-                  placeholder="Your Email"
-                  className="rounded-xl border-border/50 focus:border-primary transition-colors bg-background text-foreground"
-                />
-                <Textarea
-                  placeholder="Your Message"
-                  rows={5}
-                  className="rounded-xl border-border/50 focus:border-primary transition-colors resize-none bg-background text-foreground"
-                />
+                <div className="space-y-2">
+                  <Input
+                    {...register("name")}
+                    placeholder="Your Name"
+                    className={`rounded-xl border-border/50 focus:border-primary transition-colors bg-background text-foreground ${errors.name ? "border-red-500 focus:border-red-500" : ""
+                      }`}
+                  />
+                  {errors.name && (
+                    <p className="text-sm text-red-500">{errors.name.message}</p>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  <Input
+                    {...register("email")}
+                    type="email"
+                    placeholder="Your Email"
+                    className={`rounded-xl border-border/50 focus:border-primary transition-colors bg-background text-foreground ${errors.email ? "border-red-500 focus:border-red-500" : ""
+                      }`}
+                  />
+                  {errors.email && (
+                    <p className="text-sm text-red-500">{errors.email.message}</p>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  <Textarea
+                    {...register("message")}
+                    placeholder="Your Message"
+                    rows={5}
+                    className={`rounded-xl border-border/50 focus:border-primary transition-colors resize-none bg-background text-foreground ${errors.message ? "border-red-500 focus:border-red-500" : ""
+                      }`}
+                  />
+                  {errors.message && (
+                    <p className="text-sm text-red-500">{errors.message.message}</p>
+                  )}
+                </div>
               </div>
 
               <Button
                 type="submit"
                 size="lg"
+                disabled={isSubmitting}
                 className="w-full btn-hero rounded-xl text-lg py-6"
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </Button>
             </form>
           </div>
